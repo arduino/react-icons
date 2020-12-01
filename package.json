@@ -1,0 +1,49 @@
+{
+  "name": "@bcmi-labs/react-icons",
+  "version": "0.0.114",
+  "description": "Allows arduino developers to use the arduino icons",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/bcmi-labs/react-icons.git"
+  },
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "rollup -c",
+    "gen": "node scripts/generate-icons.js"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-image": "^2.0.4",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-url": "^4.0.2",
+    "@svgr/core": "^5.4.0",
+    "babel-loader": "^8.1.0",
+    "camelcase": "^6.0.0",
+    "figma-api": "^1.5.5",
+    "request-promise": "^4.2.5",
+    "rollup": "^2.18.0",
+    "rollup-plugin-livereload": "^1.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-postcss": "^2.5.0",
+    "rollup-plugin-react-svg": "^3.0.3",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-sizes": "^1.0.2",
+    "rollup-plugin-svg": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "rollup-plugin-typescript2": "^0.27.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.12.0"
+  }
+}
