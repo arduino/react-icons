@@ -16,7 +16,5 @@ jobs:
       - run: npm run build
       - uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          registry: 'https://npm.pkg.github.com/bcmi-labs'
-          access: restricted
-          check-version: true
+          token: ${{ secrets.NPM_TOKEN }}
+          access: "public"

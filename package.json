@@ -1,13 +1,10 @@
 {
-  "name": "@bcmi-labs/react-icons",
-  "version": "0.1.0",
+  "name": "@arduino/react-icons",
+  "version": "0.1.1",
   "description": "Allows arduino developers to use the arduino icons",
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/bcmi-labs/react-icons.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "url": "ssh://git@github.com/arduino/react-icons.git"
   },
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -22,7 +19,7 @@
     "gen": "node scripts/generate-icons.js"
   },
   "keywords": [],
-  "license": "MIT",
+  "license": "AGPL",
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@rollup/plugin-commonjs": "^13.0.0",

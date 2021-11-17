@@ -20,16 +20,31 @@ const main = async () => {
   const icons = await extractIconsInfo(file);
   console.log('Found ' + icons.length + ' icon components');
 
-  const allIconIDs = icons
-    .map(function (element) {
-      return element.nodeID;
-    })
-    .join(',');
+  const allIconNodesInChunk = [];
 
+  for (let i = 0; i < icons.length; i++) {
+
+    const chunk = Math.floor(i / 100);
+    if (allIconNodesInChunk[chunk] === undefined) {
+      allIconNodesInChunk[chunk] = [];
+    }
+    allIconNodesInChunk[chunk].push(icons[i].nodeID);
+  }
+
+  allIconPromises = allIconNodesInChunk.map(e => {
+    return api.getImage(FIGMA_ICON_FILE_ID, { ids: e.join(','), format: 'svg' });
+  })
+  
   // Download icon files
+  const imageResults = {images: {}};
   console.log('Fetching image URLs...');
-  const imageResults = await api.getImage(FIGMA_ICON_FILE_ID, { ids: allIconIDs, format: 'svg' });
-  const iconFiles = await downloadIconFiles(icons, imageResults.images);
+  for await( let iconPromise of allIconPromises) {
+    const res = await iconPromise;
+    imageResults.images = {...imageResults.images, ...res.images};
+  }
+
+
+const iconFiles = await downloadIconFiles(icons, imageResults.images);
   console.log(iconFiles.length + ' icons downloaded');
 
   return true;
