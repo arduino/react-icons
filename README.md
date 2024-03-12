@@ -1,6 +1,6 @@
-# @bcmi-labs/react-icons
+# @arduino/react-icons
 
-@bcmi-labs/react-icons is a library to import and use [arduino icons](https://zeroheight.com/59f8e25cb/p/07e4d9-iconography/b/9209b0) as react components
+@arduino/react-icons is a library to import and use [arduino icons](https://zeroheight.com/59f8e25cb/p/07e4d9-iconography/b/9209b0) as react components
 
 All icons inherit the color of the text whenever it was black in the original icon.
 
@@ -8,11 +8,11 @@ All icons inherit the color of the text whenever it was black in the original ic
 
 Include in your project with npm or yarn
 
-    $ npm install @bcmi-labs/react-icons --save
+    $ npm install @arduino/react-icons --save
 
 And import and use the component
 
-    import { IconAccountActivity, IconWarning } from '@bcmi-labs/react-icons';
+    import { IconAccountActivity, IconWarning } from '@arduino/react-icons';
 
     function Welcome(props) {
         return <h1>Hello, {props.name} <IconAccountActivity></h1>;
