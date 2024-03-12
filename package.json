@@ -1,6 +1,6 @@
 {
   "name": "@arduino/react-icons",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Allows arduino developers to use the arduino icons",
   "repository": {
     "type": "git",
@@ -46,6 +46,5 @@
     "react-dom": "^16.12.0",
     "request": "^2.88.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
