@@ -1,7 +1,7 @@
 {
   "name": "@arduino/react-icons",
   "version": "0.1.2",
-  "description": "Allows arduino developers to use the arduino icons",
+  "description": "Allows Arduino developers to use the Arduino icons",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/arduino/react-icons.git"
